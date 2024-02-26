@@ -1,19 +1,18 @@
 class JarreService {
-    constructor() {
-        this.jarres = [];
-    }
+  constructor() {
+    this.jarres = [];
+  }
 
-    addJarre = (jarre) => {
-        this.jarres.push(jarre)
-        return jarre
-    }
+  addJarre = (jarre) => {
+    this.jarres.push(jarre);
+    return jarre;
+  };
 
-    getJarres = () => this.jarres
+  getJarres = () => this.jarres;
 
-    getJarre = (id) => {
-        const jarre = this.jarres.find((item) => item.id === id)
-        return jarre
-    }
+  getJarre = (id) => {
+    return this.jarres.find((item) => item.id === id);
+  };
 }
 
 export default JarreService;
