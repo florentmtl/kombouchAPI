@@ -13,7 +13,6 @@ class Jarre {
       theVert: this.theVert,
       theNoir: this.theNoir,
       sucre: this.sucre,
-      date: this.date,
     };
   }
 }

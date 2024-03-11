@@ -13,6 +13,11 @@ class JarreService {
   getJarre = (id) => {
     return this.jarres.find((item) => item.id === id);
   };
+
+  delJarre = (id) => {
+    const idx = this.jarres.indexOf(this.getJarre(id));
+    return this.jarres.splice(idx, 1);
+  };
 }
 
 export default JarreService;

@@ -18,6 +18,11 @@ class JarreController {
     const { id } = req.params;
     return res.status(200).send(this.jarreService.getJarre(id));
   };
+
+  delJarre = (req, res) => {
+    const { id } = req.body;
+    return res.status(200).send(this.jarreService.delJarre(id));
+  };
 }
 
 export default JarreController;
