@@ -1,5 +1,5 @@
 class Jarre {
-  constructor(id, theVert, theNoir, sucre, date = Date.now()) {
+  constructor(id, theVert, theNoir, sucre, date) {
     this.id = id;
     this.theVert = theVert;
     this.theNoir = theNoir;
@@ -13,6 +13,7 @@ class Jarre {
       theVert: this.theVert,
       theNoir: this.theNoir,
       sucre: this.sucre,
+      date: this.date,
     };
   }
 }

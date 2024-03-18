@@ -5,6 +5,7 @@ class JarreService {
 
   addJarre = (jarre) => {
     this.jarres.push(jarre);
+    console.log(jarre);
     return jarre;
   };
 

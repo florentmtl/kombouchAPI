@@ -6,7 +6,7 @@ class JarreController {
   }
 
   createJarre = (req, res) => {
-    const jarre = new Jarre(req.body.id, req.body.theVert, req.body.theNoir, req.body.sucre);
+    const jarre = new Jarre(req.body.id, req.body.theVert, req.body.theNoir, req.body.sucre, req.body.date);
     return res.status(201).send(this.jarreService.addJarre(jarre));
   };
 
