@@ -1,10 +1,11 @@
 class Jarre {
-  constructor(id, theVert, theNoir, sucre, date) {
+  constructor(id, theVert, theNoir, sucre, date, finished) {
     this.id = id;
     this.theVert = theVert;
     this.theNoir = theNoir;
     this.sucre = sucre;
     this.date = date;
+    this.finished = finished;
   }
 
   toJSON() {
@@ -14,6 +15,7 @@ class Jarre {
       theNoir: this.theNoir,
       sucre: this.sucre,
       date: this.date,
+      finished: this.finished,
     };
   }
 }
