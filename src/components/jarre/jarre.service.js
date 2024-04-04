@@ -3,6 +3,14 @@ class JarreService {
     this.jarres = [];
   }
 
+  getNewID = () => {
+    if (this.jarres.length > 0) {
+      return this.jarres.at(-1).id + 1;
+    } else {
+      return 0;
+    }
+  }
+
   addJarre = (jarre) => {
     this.jarres.push(jarre);
     return jarre;
