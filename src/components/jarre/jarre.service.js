@@ -9,23 +9,18 @@ class JarreService {
     } else {
       return 0;
     }
-  }
+  };
 
   addJarre = (jarre) => {
     this.jarres.push(jarre);
     return jarre;
   };
 
-  getJarres = () => this.jarres;
+  getJarres = (fetchNumber) => this.jarres.slice(0, fetchNumber);
 
   getJarre = (id) => {
     return this.jarres.find((item) => item.id === parseInt(id));
   };
-
-  /*updateJarre = (jarre) => {
-    const idx = this.jarres.indexOf(this.getJarre(jarre.id));
-    return this.jarres.splice(idx, 1).push(jarre);
-  };*/
 
   markAsFinished = (id) => {
     const idx = this.jarres.indexOf(this.getJarre(id));

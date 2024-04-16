@@ -18,19 +18,15 @@ class JarreController {
   };
 
   getJarres = (req, res) => {
-    return res.status(200).send(this.jarreService.getJarres());
+    return req.params.fetchNumber
+      ? res.status(200).send(this.jarreService.getJarres(req.params.fetchNumber))
+      : res.status(200).send(this.jarreService.getJarres(100));
   };
 
   getJarre = (req, res) => {
     const { id } = req.params;
     return res.status(200).send(this.jarreService.getJarre(id));
   };
-
-  /*updateJarre = (req, res) => {
-    const { id } = req.params;
-    const jarre = new Jarre(id, req.body.theVert, req.body.theNoir, req.body.sucre, req.body.date, req.body.finished);
-    return res.status(201).send(this.jarreService.updateJarre(jarre));
-  };*/
 
   markAsFinished = (req, res) => {
     const { id } = req.params;
