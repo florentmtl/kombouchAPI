@@ -17,7 +17,7 @@ class JarreController {
     return res.status(201).send(this.jarreService.addJarre(jarre));
   };
 
-  getJarres = (_, res) => {
+  getJarres = (req, res) => {
     return res.status(200).send(this.jarreService.getJarres());
   };
 
